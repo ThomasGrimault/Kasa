@@ -1,0 +1,15 @@
+.picture {
+  opacity: 0;
+}
+  
+.picture-active {
+  opacity: 1;
+}
+
+.visible-chevron {
+  visibility: visible;
+}
+
+.hidden-chevron {
+  visibility: hidden;
+}
