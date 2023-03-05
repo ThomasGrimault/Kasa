@@ -107,8 +107,9 @@ function AccommodationPage() {
     }
 
     const accommodation = accommodations.find(idSearch)
+    console.log(accommodation)
   
-    if (accommodation) {  
+    if (accommodation) {
         
         return (
             <div key={id}>
@@ -136,7 +137,7 @@ function AccommodationPage() {
         )
     } else {
         return (
-            <Error />
+            <Error code="404" text="Oups! La page que vous demandez n'existe pas." link="Retourner sur la page d'accueil" />
         )
     }
 }
