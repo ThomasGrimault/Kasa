@@ -9,6 +9,10 @@ const CardContainer = styled.div`
     margin: 30px;
     position: relative;
 
+    @media (max-width: 999px) {
+        width: 80%;
+    }
+
     @media (max-width: 767px) {
         height: 255px;
         width: 100%;
