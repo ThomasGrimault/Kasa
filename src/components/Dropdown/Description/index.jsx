@@ -22,6 +22,7 @@ const DropdownHeader = styled.div `
     justify-content: space-between;
     position: relative;
     z-index: 2;
+    cursor: pointer;
 
     @media (max-width: 767px) {
         height: 30px;
@@ -62,7 +63,6 @@ const UpChevron = styled.img`
     right: 20px;
     top: 17px;
     border: none;
-    cursor: pointer;
 
     @media (max-width: 767px) {
         width: 15px;
@@ -72,8 +72,6 @@ const UpChevron = styled.img`
 `
 
 const DropdownTextContainer = styled.div`
-    height: 200px;
-    overflow: auto;
     background-color: ${colors.tertiary};
     border-radius: 0 0 10px 10px;
     position: relative;
@@ -103,9 +101,9 @@ function Description(props) {
 
     return isOpen ? (
         <DropdownContainer>
-            <DropdownHeader>
+            <DropdownHeader onClick={() => setIsOpen(false)}>
                 <DropdownTitle>{props.title}</DropdownTitle>
-                <UpChevron src={upChevron} onClick={() => setIsOpen(false)}/>
+                <UpChevron src={upChevron} />
             </DropdownHeader>
             <DropdownTextContainer>
                 <DropdownText>{props.content}</DropdownText>
@@ -113,9 +111,9 @@ function Description(props) {
         </DropdownContainer>
     ) : (
         <DropdownContainer>
-            <DropdownHeader>
+            <DropdownHeader onClick={() => setIsOpen(true)}>
                 <DropdownTitle>{props.title}</DropdownTitle>
-                <DownChevron src={downChevron} onClick={() => setIsOpen(true)}/>
+                <DownChevron src={downChevron} />
             </DropdownHeader>
         </DropdownContainer>
     )
