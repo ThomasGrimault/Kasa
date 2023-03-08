@@ -24,6 +24,7 @@ const HeaderContainer = styled.div`
 const LogoLink = styled(Link)`
 @media (max-width: 767px) {
     margin: auto;
+    margin-left: 0;
 }
 `
 
