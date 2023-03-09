@@ -3,14 +3,14 @@ import styled from 'styled-components'
 import colors from '../../utils/style/colors.js'
 
 const CardContainer = styled.div`
-    width: 340px;
+    width: 25%;
     height: 340px;
     border-radius: 10px;
     margin: 30px;
     position: relative;
 
-    @media (max-width: 999px) {
-        width: 80%;
+    @media (max-width: 992px) {
+        width: 40%;
     }
 
     @media (max-width: 767px) {
@@ -47,11 +47,14 @@ const CardTitle = styled.h2`
     font-weight: 500;
     font-size: 18px;
     color: ${colors.secondary};
-    margin-left: 20px;
+    margin: 0;
+    padding-left: 20px;
     position: relative;
-    bottom: 70px;
+    bottom: 60px;
     z-index: 3;
     width: 80%;
+    max-height: 40px;
+    overflow: hidden;
 `
 
 function Card(props) {
