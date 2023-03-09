@@ -36,10 +36,16 @@ const BannerText = styled.h1`
     bottom: 135px;
     z-index: 2;
 
+    @media (max-width: 992px) {
+        padding-left: 20px ;
+        padding-right: 20px;
+    }
+
     @media (max-width: 767px) {
         width: 60%;
         font-size: 24px;
         padding-left: 20px;
+        padding-right: 0;
         bottom: 80px;
     }
     
